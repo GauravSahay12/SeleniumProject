@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import static org.junit.Assert.*;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 import static io.restassured.RestAssured.*;
 import io.cucumber.java.en.Given;
@@ -29,12 +30,12 @@ public class stepDefination extends Utils{
 	Response Response1;
 TestDataBuild TDB=new TestDataBuild();
 
-@Given("For the given request payload")
-public void for_the_given_request_payload() throws FileNotFoundException {
+@Given("For the given request payload {string} {string} {string}")
+public void for_the_given_request_payload(String name , String language, String address) throws IOException {
     // Write code here that turns the phrase above into concrete actions
 
        Request1 =given().spec(RequestSpecification())
-  		                .body(TDB.AddPlacePayload()); 
+  		                .body(TDB.AddPlacePayload(name, address, language)); 
 	
 }
 @When("method is post and necessary url is provided")
@@ -42,7 +43,7 @@ public void method_is_post_and_necessary_url_is_provided() {
     // Write code here that turns the phrase above into concrete actions
 	
 	  
-	 Response1  = Request1.when().post("https://rahulshettyacademy.com/maps/api/place/add/json")
+	 Response1  = Request1.when().post("/maps/api/place/add/json")
 	                    .then().spec(ResponseSpecification()).extract().response();
 	
 }

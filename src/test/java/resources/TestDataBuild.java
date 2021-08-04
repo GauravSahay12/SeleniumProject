@@ -7,13 +7,13 @@ import pojo.Add_PogoMain_serialize;
 
 public class TestDataBuild {
 	
-	public Add_PogoMain_serialize AddPlacePayload() {
+	public Add_PogoMain_serialize AddPlacePayload(String name , String language, String address) {
 		  pojo.Add_PogoMain_serialize ap =new pojo.Add_PogoMain_serialize();
 		  	
 		  	ap.setAccuracy(50);
-		  	ap.setName("Gaurav");
-		  	ap.setAddress("Mithapur");
-		  	ap.setLanguage("English");
+		  	ap.setName(name);
+		  	ap.setAddress(address);
+		  	ap.setLanguage(language);
 		  	ap.setPhone_number("91-8976544435");
 		  	ap.setWebsite("Google_com");
 		  	

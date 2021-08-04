@@ -16,18 +16,18 @@ Body:
         "lng": 33.427362
     },
     "accuracy": 50,
-    "name": "Gaurav",
+    "name": "ABC House",
     "phone_number": "91-8976544435",
-    "address": "Mithapur",
+    "address": "English",
     "website": "Google_com",
-    "language": "English",
+    "language": "World Cross Center",
     "types": [
         "Shoe park",
         "Shop"
     ]
 }
 HTTP/1.1 200 OK
-Date: Wed, 04 Aug 2021 08:49:18 GMT
+Date: Wed, 04 Aug 2021 13:53:10 GMT
 Server: Apache/2.4.18 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -40,8 +40,55 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "e86e6a054bb08905addf298bd17e0f7a",
+    "place_id": "67abd940ff8089797b019cd15d8c6942",
     "scope": "APP",
-    "reference": "3397143adfcb769c9371ce07f50917a83397143adfcb769c9371ce07f50917a8",
-    "id": "3397143adfcb769c9371ce07f50917a8"
+    "reference": "45ada6c4d498690b5dfdd1eeb513c47d45ada6c4d498690b5dfdd1eeb513c47d",
+    "id": "45ada6c4d498690b5dfdd1eeb513c47d"
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "location": {
+        "lat": -38.383494,
+        "lng": 33.427362
+    },
+    "accuracy": 50,
+    "name": "XYZ House",
+    "phone_number": "91-8976544435",
+    "address": "Hindi",
+    "website": "Google_com",
+    "language": "Sea Cross Zone",
+    "types": [
+        "Shoe park",
+        "Shop"
+    ]
+}
+HTTP/1.1 200 OK
+Date: Wed, 04 Aug 2021 13:53:12 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "bf884947dd8be07df22901f0a0f9a1a0",
+    "scope": "APP",
+    "reference": "b0d94542eb9d9aac8c2d9f218c94f64ab0d94542eb9d9aac8c2d9f218c94f64a",
+    "id": "b0d94542eb9d9aac8c2d9f218c94f64a"
 }

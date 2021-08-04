@@ -1,10 +1,14 @@
 package resources;
 
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.PrintStream;
+import java.util.Properties;
 
+import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
@@ -16,20 +20,25 @@ import io.restassured.specification.ResponseSpecification;
 public class Utils  {
 	
 
-	RequestSpecification  Spec_Request;
+	public static RequestSpecification  Spec_Request;
 	
-	ResponseSpecification Spec_Response;
+	public static ResponseSpecification Spec_Response;
 	
 	
-	public RequestSpecification RequestSpecification() throws FileNotFoundException  {
+	public RequestSpecification RequestSpecification() throws IOException  {
+		
+		if(Spec_Request==null) {
 		PrintStream log = new PrintStream(new FileOutputStream("Logging.txt"));
 		
-		 Spec_Request =new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").addQueryParam("key", "qaclick123")
+		 Spec_Request =new RequestSpecBuilder().setBaseUri(getGlobalValue("baseUrl")).addQueryParam("key", "qaclick123")
 			     .addFilter(RequestLoggingFilter.logRequestTo(log)) 
 			     .addFilter(ResponseLoggingFilter.logResponseTo(log))
 				 .setContentType(ContentType.JSON).build();
 		 return Spec_Request;
 	}
+	return Spec_Request;
+	}
+	
 	public ResponseSpecification ResponseSpecification()  {
 		
 		Spec_Response=new ResponseSpecBuilder().expectStatusCode(200)
@@ -39,4 +48,11 @@ public class Utils  {
 		 return Spec_Response;
 	}
 
+	public static String getGlobalValue(String key) throws IOException {
+		Properties prop = new Properties();
+		FileInputStream fis = new FileInputStream("C:\\Users\\lenovo\\eclipse-workspace\\RestApiAutomation\\src\\test\\java\\resources\\global.properties");
+	    prop.load(fis);
+	    return prop.getProperty(key);
+    	
+	}
 }
