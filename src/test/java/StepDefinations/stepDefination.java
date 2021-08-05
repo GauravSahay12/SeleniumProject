@@ -18,6 +18,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
+import resources.ApiResources;
 import resources.TestDataBuild;
 import resources.Utils;
 
@@ -38,14 +39,26 @@ public void for_the_given_request_payload(String name , String language, String 
   		                .body(TDB.AddPlacePayload(name, address, language)); 
 	
 }
-@When("method is post and necessary url is provided")
-public void method_is_post_and_necessary_url_is_provided() {
-    // Write code here that turns the phrase above into concrete actions
+@When("User calls {string} with {string} http request")
+public void method_is_post_and_necessary_url_is_provided(String resources,String method){
+    
+	//Here constructor will be called with value of resourse which you pass
 	
-	  
-	 Response1  = Request1.when().post("/maps/api/place/add/json")
+	ApiResources ResourcesAPI=ApiResources.valueOf(resources);//invoke constructor with value of AddPlaceAPI
+	  //ResourcesAPI.getresources();//gives the path of resourses
+	
+	if(method.equalsIgnoreCase("POST")) 
+	{
+	 Response1  = Request1.when().post(ResourcesAPI.getresources())
 	                    .then().spec(ResponseSpecification()).extract().response();
+	}
 	
+	else if(method.equalsIgnoreCase("GET"))
+	{
+		Response Response1   = Request1.when().get(ResourcesAPI.getresources())
+                 .then().spec(ResponseSpecification()).extract().response();
+	}
+		
 }
 
 @Then("API call got success with status code {string}")

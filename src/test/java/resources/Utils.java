@@ -36,7 +36,7 @@ public class Utils  {
 				 .setContentType(ContentType.JSON).build();
 		 return Spec_Request;
 	}
-	return Spec_Request;
+	return Spec_Request;// Second time when this called this value will not be null so we makes it as static in declaration
 	}
 	
 	public ResponseSpecification ResponseSpecification()  {
@@ -50,7 +50,8 @@ public class Utils  {
 
 	public static String getGlobalValue(String key) throws IOException {
 		Properties prop = new Properties();
-		FileInputStream fis = new FileInputStream("C:\\Users\\lenovo\\eclipse-workspace\\RestApiAutomation\\src\\test\\java\\resources\\global.properties");
+		String path=System.getProperty("user.dir");
+		FileInputStream fis = new FileInputStream(path+"\\src\\test\\java\\resources\\global.properties");
 	    prop.load(fis);
 	    return prop.getProperty(key);
     	
