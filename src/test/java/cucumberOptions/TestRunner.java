@@ -8,7 +8,11 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features="src/test/java/features",glue={"StepDefinations"})
-public class TestRunner {
+		features="src/test/java/features",
+		glue={"StepDefinations"},
+		plugin="json:target/jsonReports/cucumber-report.json")
+//tags="@DeleteRestApi")
 
+public class TestRunner {
+			
 }

@@ -50,13 +50,16 @@ public void method_is_post_and_necessary_url_is_provided(String resources,String
 	{
 	 Response1  = Request1.when().post(ResourcesAPI.getresources())
 	                    .then().spec(ResponseSpecification()).extract().response();
+	 
 	}
 	
 	else if(method.equalsIgnoreCase("GET"))
 	{
 		 Response1   = Request1.when().get(ResourcesAPI.getresources())
                  .then().spec(ResponseSpecification()).extract().response();
+		 
 	}
+	
 		
 }
 
@@ -65,6 +68,7 @@ public void API_call_got_success_with_status_code(String code) {
     // Write code here that turns the phrase above into concrete actions
   assertEquals(Response1.getStatusCode(),Integer.parseInt(code));
   System.out.println("Successful");
+ 
 }
 
    @Then("{string} in Response should generate with value {string}")

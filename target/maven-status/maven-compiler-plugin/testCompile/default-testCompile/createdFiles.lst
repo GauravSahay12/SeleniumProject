@@ -1,3 +1,6 @@
-RestAssuredAutomation\RestApiAutomation\AppTest.class
 StepDefinations\stepDefination.class
+StepDefinations\Hooks.class
+resources\TestDataBuild.class
 cucumberOptions\TestRunner.class
+resources\Utils.class
+resources\ApiResources.class

@@ -1,0 +1,409 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-08-05T13:55:02.764Z",
+        "line": 14,
+        "name": "Verify to add place using Add RestApi",
+        "description": "",
+        "id": "validate-place-api;verify-to-add-place-using-add-restapi;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3115236200,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "For the given request payload \"ABC House\" \"English\" \"World Cross Center\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ABC House\"",
+                  "offset": 30
+                },
+                {
+                  "val": "\"English\"",
+                  "offset": 42
+                },
+                {
+                  "val": "\"World Cross Center\"",
+                  "offset": 52
+                }
+              ],
+              "location": "StepDefinations.stepDefination.for_the_given_request_payload(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3935766900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User calls \"AddPlaceAPI\" with \"POST\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AddPlaceAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 30
+                }
+              ],
+              "location": "StepDefinations.stepDefination.method_is_post_and_necessary_url_is_provided(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3291200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "API call got success with status code \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 38
+                }
+              ],
+              "location": "StepDefinations.stepDefination.API_call_got_success_with_status_code(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 866761500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "\"status\" in Response should generate with value \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 48
+                }
+              ],
+              "location": "StepDefinations.stepDefination.in_response_should_generate_with_value(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10998800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"scope\" in Response should generate with value \"APP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"scope\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"APP\"",
+                  "offset": 47
+                }
+              ],
+              "location": "StepDefinations.stepDefination.in_response_should_generate_with_value(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2371564400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "verify place_id created maps to \"ABC House\" using \"GetPlaceApI\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ABC House\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"GetPlaceApI\"",
+                  "offset": 50
+                }
+              ],
+              "location": "StepDefinations.stepDefination.verify_place_id_created_maps_to_using(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddRestApi"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-05T13:55:13.282Z",
+        "line": 15,
+        "name": "Verify to add place using Add RestApi",
+        "description": "",
+        "id": "validate-place-api;verify-to-add-place-using-add-restapi;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5000200,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "For the given request payload \"XYZ House\" \"Hindi\" \"Sea Cross Zone\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"XYZ House\"",
+                  "offset": 30
+                },
+                {
+                  "val": "\"Hindi\"",
+                  "offset": 42
+                },
+                {
+                  "val": "\"Sea Cross Zone\"",
+                  "offset": 50
+                }
+              ],
+              "location": "StepDefinations.stepDefination.for_the_given_request_payload(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 563535800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User calls \"AddPlaceAPI\" with \"POST\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AddPlaceAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 30
+                }
+              ],
+              "location": "StepDefinations.stepDefination.method_is_post_and_necessary_url_is_provided(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "API call got success with status code \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 38
+                }
+              ],
+              "location": "StepDefinations.stepDefination.API_call_got_success_with_status_code(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10000100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "\"status\" in Response should generate with value \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 48
+                }
+              ],
+              "location": "StepDefinations.stepDefination.in_response_should_generate_with_value(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10531000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"scope\" in Response should generate with value \"APP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"scope\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"APP\"",
+                  "offset": 47
+                }
+              ],
+              "location": "StepDefinations.stepDefination.in_response_should_generate_with_value(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2342043000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "verify place_id created maps to \"XYZ House\" using \"GetPlaceApI\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"XYZ House\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"GetPlaceApI\"",
+                  "offset": 50
+                }
+              ],
+              "location": "StepDefinations.stepDefination.verify_place_id_created_maps_to_using(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddRestApi"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-05T13:55:16.221Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2875907200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinations.Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "Verify to Delete place using Delete RestApi",
+        "description": "",
+        "id": "validate-place-api;verify-to-delete-place-using-delete-restapi",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1095300,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "Delete place payload",
+            "match": {
+              "location": "StepDefinations.stepDefination.delete_place_payload()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2867462500,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "User calls \"DeletePlaceAPI\" with \"POST\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DeletePlaceAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 33
+                }
+              ],
+              "location": "StepDefinations.stepDefination.method_is_post_and_necessary_url_is_provided(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 998500,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "API call got success with status code \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 38
+                }
+              ],
+              "location": "StepDefinations.stepDefination.API_call_got_success_with_status_code(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7315500,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "\"status\" in Response should generate with value \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 48
+                }
+              ],
+              "location": "StepDefinations.stepDefination.in_response_should_generate_with_value(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeleteRestApi"
+          }
+        ]
+      }
+    ],
+    "name": "Validate place Api",
+    "description": "",
+    "id": "validate-place-api",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/RestApi.feature",
+    "tags": []
+  }
+]
